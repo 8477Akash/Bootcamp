@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>OAuth2 Demo</title>
+</head>
+<body>
+<h1>Welcome Admin</h1>
+<div th:if="${name}">
+    <p>Hello, <b th:text="${name}"></b>!</p>
+    <p>Your email: <b th:text="${email}"></b></p>
+    <a href="/logout">Logout</a>
+</div>
+<div th:if="${name == null}">
+    <a href="/oauth2/authorization/google">Login with Google</a>
+</div>
+</body>
+</html>
